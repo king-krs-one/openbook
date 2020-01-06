@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jonathan Nickels">
+
+    <title>{% block head_title %}{% endblock %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_test.css' %}">
+
+    <!-- JS -->
+    <script src="{% static 'scripts/menu.js' %}"></script>
+    <script src="{% static 'scripts/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- bootstrap
+        <link rel="stylesheet" href="{% static 'bootstrap/js/bootstrap.js' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.css' %}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+
+    {% block body %}
+
+    <div class="full height">
+        <div class="flexible canvas">
+            <div class="fixed flex-container vertical">
+
+                <header id="header" class="border-bottom">
+                    <div class="fixed horizontal flex-container align-items-center">
+                        <div id="logo-home" class="m-hor-1">
+                            <a class="logo" href="/"><img style="height: 48px" src="/static/img/logo-48x48.png"></a>
+                        </div>
+                        <div id="headline">
+                            <h1 class="headline">OpenBook</h1>
+                        </div>
+                    </div>
+                </header>
+
+                {% include "menu_top.html" %}
+
+                <div class="fixed flex-container horizontal expand">
+
+                    <main id="main" class="main expand">
+                        <div class="fixed vertical flex-container scroll">
+                            <div id="content" class="content expand">
+                                {% block content %}{% endblock %}
+                            </div>
+                        </div>
+                    </main>
+
+                    {% if user.is_authenticated %}
+                    {% include "menu_right.html" %}
+                    {% endif %}
+
+                </div>
+
+                <footer id="footer" class="horizontal flex-container align-items-center p-hor-1">
+                    <span><strong>openbook</strong></span>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+            var m1 = new Menu($("#menu-horizontal"))
+        });
+    </script>
+
+    {% block scripts %}{% endblock %}
+
+    {% endblock %}
+
+    {% block extra_body %}{% endblock %}
+</body>
+
+</html>

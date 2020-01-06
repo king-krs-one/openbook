@@ -1,0 +1,36 @@
+/* Controls always take a full column width */
+.form-grid [class*='col-']:not(.col-auto) input:not([type='checkbox']):not([type='radio']),
+.form-grid [class*='col-']:not(.col-auto) button:not([type='checkbox']):not([type='radio']),
+.form-grid [class*='col-']:not(.col-auto) select, [class*='col-'] textarea,
+.form-grid [class*='col-']:not(.col-auto) .Dropdown-root {
+    width: 100%;
+    /*margin-top: 1.4rem;*/
+}
+
+.form-row [class*='col-']:not(.col-auto) input:not([type='checkbox']):not([type='radio']),
+.form-row [class*='col-']:not(.col-auto) button:not([type='checkbox']):not([type='radio']),
+.form-row [class*='col-']:not(.col-auto) select, [class*='col-'] textarea,
+.form-row [class*='col-']:not(.col-auto) .Dropdown-root {
+    width: 100%;
+    /*margin-top: 1.4rem;*/
+}
+
+.row + .row {
+    margin-top: 0.5rem;
+}
+
+/* remove spacing between middle columns */
+.row.small-gutter [class*='col-']:not(:first-child):not(:last-child) {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+/* remove right padding from first column */
+.row.small-gutter [class*='col-']:first-child {
+    padding-right: 2px;
+}
+
+/* remove left padding from first column */
+.row.small-gutter [class*='col-']:last-child {
+    padding-left: 2px;
+}

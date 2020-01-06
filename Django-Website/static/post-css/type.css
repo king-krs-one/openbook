@@ -1,0 +1,139 @@
+
+/********** HEADING *******************************************************/
+
+:--heading {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-heading);
+    margin-bottom: var(--margin-bottom-heading);
+}
+
+h1, .h1 { font-size: 20px; }
+h2, .h2 { font-size: 18px; }
+h3, .h3 { font-size: 16px; }
+h4, .h4 { font-size: 14px; }
+h5, .h5 { font-size: 12px; }
+h6, .h6 { font-size: 10px; }
+
+
+.lead {
+    font-size: var(--font-sizey-lead);
+    font-weight: var(--font-weight-lead);
+}
+
+.headline {
+    color: var(--color-headline);
+    font-weight: var(--fontweight-headline);
+}
+
+.subtitle {
+    color: var(--color-heading);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-subtitle);
+}
+
+
+/********** CODE *******************************************************/
+
+code {
+    font-size: 87.5%;
+    color: var(--color-code);
+    word-break: break-word;
+}
+
+
+/********** HORIZONTAL RULES *******************************************************/
+
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    border-top: var(--border-hr);
+}
+
+
+/********** EMPHASIS *******************************************************/
+
+small, .small {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-default);
+}
+
+mark, .mark {
+    padding: var(--padding-mark);
+    background-color: var(--bg-color-mark);
+}
+
+
+/********** MISC *******************************************************/
+
+.initialism {
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+
+/********** BLOCKQUOTES *******************************************************/
+
+.blockquote {
+    margin-bottom: var(--margin-bottom-blockquote);
+    font-size: var(--font-size-blockquote);
+    color: var(--color-blockquote);
+}
+
+.blockquote-footer {
+    display: block;
+    font-size: var(--font-size-blockquote-small);
+    color: var(--color-blockquote-small);
+} 
+
+.blockquote-footer::before{
+    content: "\2014\00A0"; /* em dash, nbsp */
+}
+
+
+/********** MESSAGES *******************************************************/
+
+ul.messages {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.messages li {
+    padding: 0 1rem;
+    margin: 0;
+}
+
+ul.messages .info {
+    color: var(--color-message-info);
+    background-color: var(--bg-color-message-info);
+}
+
+ul.messages .success {
+    color: var(--color-message-success);
+    background-color: var(--bg-color-message-success);
+}
+
+ul.messages .warning {
+    color: var(--color-message-warning);
+    background-color: var(--bg-color-message-warning);
+}
+
+ul.messages .error {
+    color: var(--color-message-error);
+    background-color: var(--bg-color-message-error);
+}
+
+ul.messages .info, ul.messages .success, ul.messages .warning, ul.messages .error, ul.messages .validation {
+    border-bottom: var(--border-message-horizontal);
+    line-height: var(--height-menu-horizontal);
+}
+
+/* TEXT STATUS */
+
+.text-info       { color: var(--color-text-info); }
+.text-success    { color: var(--color-text-success); }
+.text-warning    { color: var(--color-text-warning); }
+.text-error      { color: var(--color-text-error); }

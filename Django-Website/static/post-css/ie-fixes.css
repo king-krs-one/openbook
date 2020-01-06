@@ -1,0 +1,11 @@
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    .flex-container:not(.fixed) > * {
+        flex: auto !important;
+    }
+    
+    .flex-container:not(.fixed).fluid :--main {
+        min-height: var(--min-height-main);
+    }
+}

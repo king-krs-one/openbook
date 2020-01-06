@@ -1,0 +1,157 @@
+/* ICONS */
+
+.icon {
+    height: 30px;
+    width: 30px
+}
+
+[class^="icon-"],
+[class*="icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../img/glyphicons-halflings.png");
+    background-repeat: no-repeat;
+}
+
+.icon-warning {
+    background-image: url("../img/warning_icon.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 18px;   
+    vertical-align: middle;
+    background-size: 18px 18px;
+}
+
+.copy_icon {
+    background-image: url(../img/copy_icon.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;   
+    vertical-align: middle;
+}
+
+.paste_icon {
+    background-image: url(../img/paste_icon.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;     
+    vertical-align: middle; 
+}
+
+.edit_icon {
+    background-image: url(../img/pencil.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 25px;
+    height: 14px;
+    margin-left: 5px;
+}
+
+.remove_icon {
+    background-image: url(../img/cross-dark.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 2px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.undo_icon {
+    background-image: url(../img/undo_icon.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;      
+    vertical-align: middle;    
+} 
+
+
+.icon-tree-structure {
+    background-image: url("../img/tree-structure.png");
+    background-size: 14px 14px;
+}
+
+.export-icon {
+    background-image: url("../img/export.png");
+}
+
+.icon-db {
+    background-image: url("../img/db.png");
+}
+
+.help_icon {
+    background-image: url("../img/help.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: inline-block;  
+    width: 18px;
+    height: 18px;
+    vertical-align: text-top;
+    margin-left: 1px;
+    cursor: pointer;
+    border: none;
+}
+
+/* .icon-white,.nav-pills>.active>a>[class^="icon-"],
+.nav-pills>.active>a>[class*=" icon-"],
+.nav-list>.active>a>[class^="icon-"],
+.nav-list>.active>a>[class*=" icon-"],
+.navbar-inverse .nav>.active>a>[class^="icon-"],
+.navbar-inverse .nav>.active>a>[class*=" icon-"],
+.dropdown-menu>li>a:hover>[class^="icon-"],
+.dropdown-menu>li>a:hover>[class*=" icon-"],
+.dropdown-menu>.active>a>[class^="icon-"],
+.dropdown-menu>.active>a>[class*=" icon-"],
+.dropdown-submenu:hover>a>[class^="icon-"],
+.dropdown-submenu:hover>a>[class*=" icon-"] {
+    background-image: url("../img/glyphicons-halflings-white.png")
+} */
+
+.icon-execution { background-position: -336px -119px; }
+.icon-search { background-position: -48px 0; }
+.icon-zoom-in { background-position: -336px 0; }
+.icon-user { background-position: -168px 0; }
+.icon-th-large { background-position: -216px 0; }
+.icon-th-list { background-position: -264px 0; }
+.icon-ok { background-position: -288px 0; }
+.icon-trash { background-position: -456px 0; }
+.icon-home { background-position: 0 -24px; }
+.icon-list-alt { background-position: -264px -24px; }
+.icon-book { background-position: -48px -48px; }
+.icon-list { background-position: -360px -48px; }
+.icon-pencil { background-position: 0 -72px; }
+.icon-share { background-position: -120px -72px; }
+.icon-plus-sign { background-position: 0 -96px; }
+.icon-minus-sign { background-position: -24px -96px; }
+.icon-exclamation-sign { background-position: 0 -120px; }
+.icon-folder-open { background-position: -408px -120px; }
+.icon-align-justify { background-position: -336px -48px; }
+.icon-refresh { background-position: -240px -24px }
+.icon-file { background-position: -24px -24px; }
+.icon-check { background-position: -144px -72px; }
+.icon-info { background-position: -120px -96px; }
+
+.add-btn {
+    border: 0 !important;
+    background-color: transparent !important;
+    cursor: pointer !important;
+    /* outline: 0; */
+}
+
+.add-icon {
+    background-image: url(../react/img/round-add-button.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    opacity: 0.75;
+}

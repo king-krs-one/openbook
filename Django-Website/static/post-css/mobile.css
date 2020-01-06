@@ -1,0 +1,15 @@
+@media only screen and (min-width: 768px) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none !important;
+    }
+
+    #quipu_logo {
+        display: none;
+    }
+}

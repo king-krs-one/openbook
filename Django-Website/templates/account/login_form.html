@@ -1,0 +1,23 @@
+{% load i18n %}
+<h1>{% trans "Sign In" %}</h1>
+
+<form class="login form-grid" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-12">
+            {{ form_login.as_p }}
+        </div>
+    </div>
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="row">
+        <div class="col-md-7">
+            <a class="f-1 button secondaryAction"
+                href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        </div>
+        <div class="col-md-5">
+            <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+        </div>
+    </div>
+</form>

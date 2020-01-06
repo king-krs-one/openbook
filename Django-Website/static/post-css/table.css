@@ -1,0 +1,118 @@
+
+/* TABLE STYLES */
+
+table {
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: var(--margin-bottom-table);
+    background-color: var(--bg-color-table);
+}
+
+.table th, 
+.table td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--padding-table-cell);
+    line-height: var(--line-height-table);
+    border-top: var(--border-table);
+}
+
+.table th {
+    font-weight: var(--font-weight-table-header);
+}
+
+.table thead th {
+    vertical-align: bottom
+}
+
+.table thead th {
+    border-bottom: var(--border-table);
+}
+
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+    border-top: 0
+}
+
+.table tbody + tbody {
+    border-top: var(--border-table);
+}
+
+.table .table {
+    background-color: var(--bg-color-table);
+}
+
+/* TABLE BORDERED */
+
+.table-bordered {
+    border: var(--border-table);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: var(--border-table);
+}
+
+.table-bordered thead th, 
+.table-bordered thead td {
+    border-bottom: var(--border-table);
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody + tbody {
+    border: 0;
+}
+
+/* TABLE STRIPED */
+
+.table-striped tbody > tr:nth-child(odd),
+.table-striped tbody > tr:nth-child(odd) {
+    background-color: var(--bg-color-table-row-odd);
+}
+
+.table-striped tbody > tr:nth-child(even),
+.table-striped tbody > tr:nth-child(even) {
+    background-color: var(--bg-color-table-row-even);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--bg-color-table-row-hover);
+}
+
+
+
+
+/* TO BE REIMPLEMENTED */
+
+
+
+
+/* 
+.table-bordered {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    *border-collapse: collapse;
+    border-left: 0;  
+}
+.table-bordered th,
+.table-bordered td {
+    border-left: 1px solid #ddd
+}
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+    border-top: 0
+}
+.table-striped tbody>tr:nth-child(odd)>td,
+.table-striped tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+} */
+

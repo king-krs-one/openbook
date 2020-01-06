@@ -1,0 +1,87 @@
+
+/* LAYOUT */
+
+body {
+    width: 100%;
+}
+
+body > .full.height {
+    height: 100vh;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.container.vertical,
+.container.horizontal {
+    width: 100%;
+}
+
+/* HEADER */
+
+:--header.sticky ~ :--menu-horizontal.sticky {
+    top: var(--height-header);
+}
+
+:--header {
+    width: var(--width-header);
+    height: var(--height-header);
+    min-height: var(--height-header);
+    background-color: var(--bg-color-header);
+    z-index: var(--z-index-header);
+}
+
+:--header a {
+    display: inline-block;
+}
+
+:--header img.logo {
+    height: var(--height-logo);
+}
+
+:--header img.quipu-logo {
+    height: var(--height-quipu-logo);
+}
+
+:--header :--heading.headline {
+    margin: 0;
+}
+
+:--header.border-bottom {
+    border-bottom: var(--border-menu);
+}
+
+/* MAIN */
+
+:--main {
+    width: var(--width-main);
+    background-color: var(--bg-color-main);
+}
+
+/* CONTENT */
+
+:--content {
+    width: var(--width-content);
+    padding: var(--padding-content);
+    background-color: var(--bg-color-content);
+}
+
+:--content :--content-inner {
+    padding: var(--padding-content-inner);
+    background-color: var(--bg-color-content-inner);
+    border: var(--border-content-inner);
+}
+
+/* FOOTER */
+
+:--footer {   
+    position: relative; 
+    width: var(--width-footer);
+    height: var(--height-footer);
+    z-index:  var(--z-index-footer); /* Needs to be more than the active tabs */  
+    background-color:  var(--bg-color-footer);  
+    border-top: var(--border-footer);
+}

@@ -1,0 +1,51 @@
+<nav id="menu-horizontal" class="menu horizontal flex-container align-items-center">
+
+    <!-- CONTENT -->
+    <div class="relative dropdown item align-self-stretch">
+        <div class="flex item align-items-center">
+            <a href="#">Books</a>
+        </div>
+        <div class="menu no-wrap">
+            <div class="item"><a tabindex="-1" href="{% url 'books_read' %}">Read Book</a></div>
+            <div class="item"><a tabindex="-1" href="{% url 'books_edit' %}">List Book</a></div>
+            <div class="item"><a tabindex="-1" href="{% url 'books_read' %}">Create Book</a></div>
+        </div>
+    </div>
+
+
+    <!-- MENU ITEMS RIGHT -->
+
+    {% if not user.is_authenticated %}
+    <div class="item right">
+        <a href="{% url 'account_signup' %}">Sign up</a>
+    </div>
+    {% endif %}
+
+    <!-- PROFILE -->
+    <div id="profile" class="relative dropdown item align-self-stretch {% if user.is_authenticated %}right{% endif %}">
+        <div class="dropdown-toggle flex item align-items-center h-100">
+            <img class="user-icon" style="height: 24px" src="/static/img/user-icon.png">
+        </div>
+        <div class="menu no-wrap right-edge">
+            {% if user.is_authenticated %}
+            <div class="item p-hor-half-1 p-ver-quarter-1">Item 1</div>
+            <div class="item p-hor-half-1 p-ver-quarter-1">Item 2</div>
+            <div class="item p-hor-half-1 p-ver-quarter-1">Item 3</div>
+            {% else %}
+            <div class=" p-1" style="width: 250px;">{% include "account/login_form.html" %}</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="settings" class="relative dropdown item align-self-stretch">
+        <div class="dropdown-toggle flex item align-items-center h-100">
+            <img class="dots-icon" style="height: 16px" src="/static/img/dots-icon.png">
+        </div>
+        <div class="menu no-wrap right-edge">
+            <div class="item p-hor-half-1 p-ver-quarter-1">Item 1</div>
+            <div class="item p-hor-half-1 p-ver-quarter-1">Item 2</div>
+            <div class="item p-hor-half-1 p-ver-quarter-1">Item 3</div>
+        </div>
+    </div>
+</nav>

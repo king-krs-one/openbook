@@ -1,0 +1,212 @@
+:--flex-element {
+    display: flex;
+}
+
+:--flex-element.row,
+:--flex-element.horizontal {
+    flex-direction: row;
+}
+
+:--flex-element.column,
+:--flex-element.vertical {
+    flex-direction: column;
+}
+
+.flex-container.fixed {
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex-container .scroll {
+    overflow: auto;
+}
+
+.flex-container.fixed.scroll {
+    overflow: auto;
+}
+
+.flex-container.fixed > .scroll {
+    overflow: auto;
+}
+
+.flex-container.fixed > .hidden {
+    overflow: hidden;
+}
+
+.flex-container.fluid {
+    min-height: 100%;
+}
+
+.flex-container.fixed > .container.fluid {
+    overflow: auto;
+}
+
+:--flex-element > .right,
+:--flex-element > [class*="align-items"] > .right {
+    margin-left: auto !important;
+}
+
+/* FULL HEIGHT FOR CONTAINER ELEMENTS */
+
+:--flex-element > .full.height {
+    height: 100%;
+}
+
+:--flex-element > .expand:not(.f-1, .f-2, .f-3, .f-4, .f-5, .f-6, .f-7, .f-8, .f-9, .f-10, .f-11, .f-12) { 
+    flex: 1 
+}
+
+.flex-container.fixed > .full.height {
+    height: 100%;
+}
+
+.flex-container.fixed :--flex-element > .full.height {
+    height: 100%;
+}
+
+.flex-container.fluid.vertical > .full.height:not(.f-1, .f-2, .f-3, .f-4, .f-5, .f-6, .f-7, .f-8, .f-9, .f-10, .f-11, .f-12) {
+    height: initial;
+    flex: 1;
+}
+
+.flex-container.fluid.horizontal > .full.height  {
+    height: initial;
+    align-self: stretch;
+}
+
+/* ALIGNMENT */
+
+:--flex-element[class*="align-child-items"] > * {
+    display: flex;
+}
+
+:--flex-element > [class*="align-items"] {
+    display: flex;
+}
+
+:--flex-element[class*="align-child-items"]:not([class*="align-items"]) { 
+    align-items: stretch; 
+}
+
+:--flex-element.align-items-start { align-items: flex-start; }
+:--flex-element.align-items-end { align-items: flex-end; }
+:--flex-element.align-items-stretch { align-items: stretch; }
+:--flex-element.align-items-center { align-items: center; }
+:--flex-element.align-items-baseline { align-items: baseline; }
+
+:--flex-element > .align-items-start { align-items: flex-start; }
+:--flex-element > .align-items-end { align-items: flex-end; }
+:--flex-element > .align-items-stretch { align-items: stretch; }
+:--flex-element > .align-items-center { align-items: center; }
+:--flex-element > .align-items-baseline { align-items: baseline; }
+
+:--flex-element > .align-self-start { align-self: flex-start; }
+:--flex-element > .align-self-end { align-self: flex-end; }
+:--flex-element > .align-self-stretch { align-self: stretch; }
+:--flex-element > .align-self-center { align-self: center; }
+:--flex-element > .align-self-baseline { align-self: baseline; }
+
+:--flex-element.align-child-items-start > * { align-items: flex-start; }
+:--flex-element.align-child-items-end > * { align-items: flex-end; }
+:--flex-element.align-child-items-stretch > * { align-items: stretch; }
+:--flex-element.align-child-items-center > * { align-items: center; }
+:--flex-element.align-child-items-baseline > * { align-items: baseline;}
+
+:--flex-element.align-child-items-start > * > .align-self-start { align-self: flex-start; }
+:--flex-element.align-child-items-end > * > .align-self-end { align-self: flex-end; }
+:--flex-element.align-child-items-stretch > * > .align-self-stretch { align-self: stretch; } 
+:--flex-element.align-child-items-center > * > .align-self-center { align-self: center; } 
+:--flex-element.align-child-items-baseline > * > .align-self-baseline { align-self: baseline; }
+
+/* JUSTIFY */
+
+:--flex-element[class*="justify-child-content"] > *{
+    display: flex;
+}
+
+:--flex-element > [class*="justify-content"] {
+    display: flex;
+}
+
+:--flex-element[class*="justify-child-content"]:not([class*="justify-content"]) { 
+    justify-content: stretch;
+}
+
+:--flex-element.justify-content-start > * { justify-content: flex-start; }
+:--flex-element.justify-content-end > * { justify-content: flex-end; }
+:--flex-element.justify-content-stretch > * { justify-content: stretch; }
+:--flex-element.justify-content-center > * { justify-content: center; }
+:--flex-element.justify-content-baseline > * { justify-content: baseline;}
+:--flex-element.justify-content-around > * { justify-content: space-around;}
+:--flex-element.justify-content-between > * { justify-content: space-between;}
+:--flex-element.justify-content-evenly > * { justify-content: space-evenly;}
+
+:--flex-element.justify-child-content-start > * { justify-content: flex-start; }
+:--flex-element.justify-child-content-end > * { justify-content: flex-end; }
+:--flex-element.justify-child-content-stretch > * { justify-content: stretch; }
+:--flex-element.justify-child-content-center > * { justify-content: center; }
+:--flex-element.justify-child-content-baseline > * { justify-content: baseline;}
+:--flex-element.justify-child-content-around > * { justify-content: space-around;}
+:--flex-element.justify-child-content-between > * { justify-content: space-between;}
+:--flex-element.justify-child-content-evenly > * { justify-content: space-evenly; }
+
+
+/* overflow elements (scrollable) should not be center aligned, because it makes it impossible to scroll the whole content */
+
+:--flex-element[class*="align-items"].scroll {
+    align-items: start !important;
+}
+
+:--flex-element[class*='align-items'] > .scroll {
+    align-self: start !important;
+}
+
+/* ALIGNMENT */
+
+:--flex-element .item.bottom,
+:--flex-element .container.bottom {
+    margin-top: auto !important;
+}
+
+:--flex-element .item.bottom,
+:--flex-element .item.bottom ~ .item,
+:--flex-element .container.bottom,
+:--flex-element .container.bottom ~ .item {
+    margin-bottom: 0 !important;
+}
+
+:--flex-element .item.top,
+:--flex-element .container.top  {
+    margin-bottom: auto !important;
+}
+
+:--flex-element .item.top,
+:--flex-element .item.top ~ .item,
+:--flex-element .container.top,
+:--flex-element .container.top ~ .item {
+    margin-top: 0 !important;
+}
+
+:--flex-element .item.left,
+:--flex-element .container.left  {
+    margin-right: auto !important;
+}
+
+:--flex-element .item.left,
+:--flex-element .item.left ~ .item,
+:--flex-element .container.left,
+:--flex-element .container.left ~ .item {
+    margin-left: 0 !important;
+}
+
+:--flex-element .item.right,
+:--flex-element .container.right  {
+    margin-left: auto !important;
+}
+
+:--flex-element .item.right,
+:--flex-element .item.right ~ .item,
+:--flex-element .container.right,
+:--flex-element .container.right ~ .item {
+    margin-right: 0 !important;
+}

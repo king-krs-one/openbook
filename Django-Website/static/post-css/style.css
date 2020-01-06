@@ -1,0 +1,403 @@
+@import 'ie-fixes.css';
+@import 'reboot.css';
+@import 'type.css';
+@import 'layout.css';
+@import 'grid.css';
+@import 'fonts.css';
+@import 'format.css';
+@import 'spacing.css';
+@import 'flexible-canvas.css';
+@import 'inputs.css';
+/* @import 'icons.css'; */
+@import 'buttons.css';
+@import 'table.css';
+@import 'menus.css';
+
+:root {
+    --white-primary: #ffffff;
+    --white-secondary: #fcfcfc; 
+    --white-gray: #f9f9f9;
+    --orange: #e67e22;
+    --red: #d9534f;
+    --wine: #9a1827;
+    --pink: #e83e8c;
+    --hazelnut: #9f6000;
+    --blue-sky: #f0f8ff;
+    --blue-light: #9dbae2;
+    --blue: #3498db;
+    --blue-dark: #4A7090;
+    --green: #4d8463;
+    --green-blue: #16a085;
+    /* --gray-light: #ecebe9; */
+    --gray: #cccccc;
+    --gray-light: #ededeb;
+    --gray-primary: #5c6166;
+    --gray-secondary: #6c757d;
+    --gray-dark: #343a40; 
+
+    /* 
+
+    - Height & Width
+    - Borders 
+    - Colors
+    - Backgrounds
+    - Fonts & Line Heights
+    - Z-Index
+    - Margins
+    - Paddings
+
+    */
+    
+
+    /***** HEIGHT & WIDTH *****************************************************/  
+
+    --width-header: 100%;
+    --width-main: 100%;
+    --width-content: 100%;
+    --width-footer: 100%;
+    --width-sidebar: 220px;
+
+    --height-header: 80px;
+    --height-menu-horizontal: 32px; /* not used for the moment, height depends on the child elements */
+    --height-footer: 32px;
+
+    --height-text-field: 2rem;
+    --height-dropdown: 2rem;
+    --height-dropdown-option: 2rem;
+    --height-button: 2rem;
+    --height-label: 1rem;
+
+    --height-logo: 64px;
+    --height-quipu-logo: 72px;
+
+    /* table row heights */
+
+    --min-height-table-header-row-small: 1.5rem;
+    --min-height-table-header-row-normal: 2rem;
+    --min-height-table-header-row-large: 2.5rem;
+
+    --min-height-table-body-row-small: 1.5rem;
+    --min-height-table-body-row-normal: 2rem;
+    --min-height-table-body-row-large: 2.5rem;
+    
+    --min-height-table-foot-row-small: 1.5rem;
+    --min-height-table-foot-row-normal: 2rem;
+    --min-height-table-foot-row-large: 2.5rem;
+
+
+    /***** BORDERS DEFAULTS *****************************************************/
+
+    --border-default: 1px solid #dddddd;
+    --border-transparent: 1px solid transparent;
+    --border-gray: 1px solid #bdbfc1;
+    --border-gray-light: 1px solid #efefef;
+    --border-gray-light-secondary: 1px solid #fafafa;
+    --border-blue-light: 1px solid #b3d4fd;
+    
+
+    /***** BORDERS *****************************************************/  
+
+    /* layout */
+    --border-menu: var(--border-default);
+    --border-menu-tabs: var(--border-default);
+    --border-sidebar: var(--border-gray-light);
+    --border-footer: var(--border-default);
+    --border-message-horizontal: var(--border-default);
+    --border-content-inner: var(--border-default);
+
+    /* section elements */
+    --border-panel: var(--border-default);
+    --border-window: var(--border-default);
+    --border-div-section: var(--border-default);
+    --border-frame: var(--border-default);
+
+    /* table */
+    --border-table: var(--border-default);
+
+    /* react table */
+    --border-react-table-outer: var(--border-default);
+    --border-react-table-inner-vertical:  1px solid rgba(0, 0, 0, 0.02);
+    --border-react-table-inner-horizontal: 1px solid rgba(0, 0, 0, 0.05);
+    --border-react-table-input: var(--border-transparent);
+    --border-react-table-input-disabled: var(--border-transparent);
+    --border-react-table-input-focus: var(--border-blue-light);
+
+    /* react tabs */
+    --border-react-tabs: var(--border-default);
+    --border-react-tabs-tab: var(--border-transparent);
+    --border-react-tabs-tab-selected: var(--border-default);
+    --border-react-tabs-tab-focus: var(--border-blue-light);
+    
+    /* button */
+    --border-btn: var(--border-gray);
+    --border-color-btn-green: color-mod(var(--green-blue) l(-5%));
+    --border-color-btn-blue: color-mod(var(--blue) l(-5%));
+    --border-color-btn-yellow: color-mod(var(--orange) l(-5%));
+    --border-color-btn-red: color-mod(var(--red) l(-5%));
+
+    /* text field */
+    --border-text-field: var(--border-default);
+    --border-text-field-focus: var(--border-blue-light);
+    --border-text-field-disabled: var(--border-default);  
+    
+    /* dropdown */
+    --border-dropdown: var(--border-default);
+    --border-dropdown-focus: var(--border-blue-light);
+    --border-dropdown-disabled: var(--border-default);   
+    --border-dropdown-option: var(--border-transparent);   
+    --border-dropdown-option-hover: var(--border-default);   
+    --border-dropdown-option-selected: var(--border-default);   
+
+    /* others */
+    --border-hr: var(--border-default);
+
+    
+    /***** BOX SHADOWS *****************************************************/  
+
+    /* react table */
+    --box-shadow-react-table-header: 0px 4px 5px -3px rgba(64, 64, 64, 0.3);
+    --box-shadow-react-table-footer: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    --box-shadow-react-table-pagination: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+
+
+    /***** COLORS *****************************************************/
+
+    /* layout */
+    --color-body: var(--gray-dark);
+    --color-heading: var(--blue-dark);
+    --color-headline: var(--blue-dark);
+    --color-menu-tabs: var(--gray-primary);
+
+    /* text field */
+    --color-text-field: var(--gray-primary);
+
+    /* table */
+    --color-table: var(--gray-secondary);
+    --color-table-input: var(--gray-secondary);
+    --color-table-input-disabled: var(--gray-secondary);
+    --color-table-caption: var(--gray-secondary);
+
+    /* react tabs */
+    --color-react-tabs-tab: var(--gray-dark);
+    --color-react-tabs-tab-selected: var(--gray-dark);
+    --color-react-tabs-tab-disabled: var(--gray);
+
+    /* dropdown */
+    --color-dropdown: var(--gray-primary);
+    --color-dropdown-option: var(--gray-primary);
+    --color-dropdown-option-hover: var(--gray-primary);
+    --color-dropdown-option-selected: var(--gray-primary);
+    --color-dropdown-title: var(--gray-primary);
+    --color-dropdown-no-result: var(--gray);
+    
+    /* button */
+    --color-btn-green: var(--white-primary);
+    --color-btn-blue: var(--white-primary);
+    --color-btn-yellow: var(--white-primary);
+    --color-btn-red: var(--white-primary);
+
+    /* links */
+    --color-link: var(--blue-light);
+    --color-link-active: var(--red);
+    --color-link-hover: var(--blue-light);
+    --color-link-focus: var(--blue-light);
+    --color-link-visited: var(--blue-light);
+    
+    /* messages */
+    --color-message-info: var(--blue-dark);
+    --color-message-success: var(--green);
+    --color-message-warning: var(--hazelnut);
+    --color-message-error: var(--wine);
+
+    /* status text */
+    --color-text-info: var(--blue-dark);
+    --color-text-success: var(--green);
+    --color-text-warning: var(--orange);
+    --color-text-error: var(--red);
+
+    /* others */
+    --color-code: var(--blue-dark);
+    --color-blockquote: var(--gray-dark);
+    --color-blockquote-small: var(--gray-secondary);
+
+    /***** BACKGROUNDS *****************************************************/
+
+    /* layout */
+    --bg-color-body: var(--white-secondary);
+    --bg-color-header: var(--white-primary);
+    --bg-color-main: var(--blue-sky);
+    --bg-color-footer: var(--white-secondary);
+    --bg-color-content: var(--blue-sky);
+    --bg-color-content-inner: var(--white-primary);
+    --bg-color-menu: var(--white-primary);
+    --bg-color-menu-tab: var(--white-secondary);
+    --bg-color-menu-tab-active: var(--blue-sky);
+    --bg-color-dropdown-item-active: var(--blue-sky);
+    --bg-color-submenu: var(--white-secondary);
+    --bg-color-sidebar: var(--white-secondary);
+
+    /* text field */
+    --bg-color-text-field: var(--white-primary);
+    --bg-color-text-field-disabled: var(--white-gray);
+
+    /* dropdown */
+    --bg-color-dropdown: var(--white-primary);
+    --bg-color-dropdown-disabled: var(--white-gray);
+    --bg-color-dropdown-menu: var(--white-primary);
+    --bg-color-dropdown-option: var(--white-primary);
+    --bg-color-dropdown-option-hover: var(--blue-sky);
+    --bg-color-dropdown-option-selected: var(--blue-sky);
+    
+    /* button */
+    --bg-color-btn-default: var(--gray-light);
+    --bg-color-btn-green: var(--green-blue);
+    --bg-color-btn-blue: var(--blue);
+    --bg-color-btn-yellow: var(--orange);
+    --bg-color-btn-red: var(--red);
+    
+    /* table */
+    --bg-color-table: var(--white);
+    --bg-color-table-row-odd: var(--white-gray);
+    --bg-color-table-row-even: var(--white);
+    --bg-color-table-row-hover: var(--gray-light);
+    
+    /* react table */
+    --bg-color-react-table: var(--white);
+    --bg-color-react-table-header: rgba(0, 0, 0, 0.03);
+    --bg-color-react-table-header-light-blue: var(--blue-sky);
+    --bg-color-react-table-row-odd: var(--white-gray);
+    --bg-color-react-table-row-even: var(--white);
+    --bg-color-react-table-row-hover: var(--gray-light);
+    --bg-color-react-table-row-disabled: var(--white-gray);
+    --bg-color-react-table-cell-disabled: var(--white-gray);
+    --bg-color-react-table-input: var(--white);
+    --bg-color-react-table-input-disabled: var(--white-gray);
+    
+    /* react tabs */
+    --bg-color-react-tabs-tab: transparent;
+    --bg-color-react-tabs-tab-selected: var(--white);
+
+    /* section elements */
+    --bg-color-panel: var(--white-gray);
+    --bg-color-div-section: var(--white-gray);
+    --bg-color-window: var(--white-secondary);
+    --bg-color-overlay: var(--white-gray);
+    
+    /* messages */
+    --bg-color-message-info: #bde5f8;
+    --bg-color-message-success: #dff2bf;
+    --bg-color-message-warning: #feefb3;
+    --bg-color-message-error: #ffbaba;
+    
+    /* others */
+    --bg-color-mark: var(--blue-sky);
+
+
+    /***** FONTS *****************************************************/
+
+    --font-family-default: Roboto, Ubuntu;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --font-size-default: 13px;
+    --font-size-small: 11px;
+    --font-size-subtitle: 14px;
+    --font-size-lead: 1.25rem;
+    --font-size-blockquote: 13px;
+    --font-size-blockquote-small: 11px;
+    --font-size-label: 13px;
+    --font-size-text-field: 13px;
+    --font-size-dropdown: 13px;
+    --font-size-button: 14px;
+    
+    --font-weight-default: 400;
+    --font-weight-bolder: bolder;
+    --font-weight-subtitle: bold;
+    --font-weight-lead: 300;
+    --font-weight-table-header: 700;
+    --font-weight-button: 400;
+
+    --line-height-default: 1.5;
+    --line-height-button: 1.5;
+    --line-height-table: 20px;
+
+    
+    /***** Z-INDEX *****************************************************/
+
+    --z-index-header: 9;
+    --z-index-menu: 9;
+    --z-index-footer: 9;
+    --z-index-menu-horizontal: 9;
+    --z-index-overlay: 999;
+    --z-index-table-header: 4; /* needed for box-shadow to overlay the table-body */
+    --z-index-dropdown-menu: 99;
+
+
+    /* MARGINS */
+
+    --margin-bottom-heading: 0.5rem;
+    --margin-bottom-paragraph: 0.5rem;
+    --margin-bottom-blockquote: 0.5rem;
+    --margin-bottom-table: 1rem;
+    --margin-bottom-pre: 0.5rem;
+    --margin-bottom-figure: 0.5rem;
+    --margin-bottom-list: 1rem;
+    --margin-bottom-list-item: 0.25rem;
+    --margin-bottom-label: 3px;
+    --margin-bottom-legend: .5rem;
+    --margin-bottom-div-section: 1rem;
+    --margin-bottom-panel: 1rem;
+    --margin-bottom-window: 1rem;
+    --margin-bottom-frame: 1rem;
+    --margin-bottom-react-tabs: 1rem;
+
+    /* PADDINGS */
+
+    --padding-content: 1rem;
+    --padding-content-inner: 1rem;
+    --padding-window: 1rem;
+    --padding-panel: 1rem;
+    --padding-div-section: 1rem;
+    --padding-mark: .2rem;
+    /* --padding-table-cell: .2rem; */
+    --padding-table-cell: 5px;
+    
+
+    /* this is only required for fluid flex-container in internet explorer, since flex items will collapse in height */
+    /* if only min-height is defined for the parent  */
+
+    --level-horizontal-menu: 2;
+
+    --min-height-main: calc(100vh - var(--height-header) - var(--level-horizontal-menu) * var(--height-menu-horizontal) - var(--height-footer) - var(--level-horizontal-menu) * 2px - 1px);
+}
+
+@custom-selector :--header header, #header;
+@custom-selector :--main main, #main;
+@custom-selector :--footer footer, #footer;
+@custom-selector :--content #content, .content;
+@custom-selector :--content-inner #content-inner, .content-inner;
+@custom-selector :--menu nav, .menu;
+@custom-selector :--menu-horizontal nav.horizontal, .menu.horizontal;
+@custom-selector :--menu-vertical nav.left, nav.right, nav.vertical, .menu.left, .menu.right, .menu.vertical;
+@custom-selector :--menu-right nav.right, .menu.right, #menu-right;
+@custom-selector :--menu-left nav.left, .menu.left,  #menu-left;
+@custom-selector :--flex-container .flexible.canvas .flex-container;
+@custom-selector :--flex-element .flex, .flex-container, .menu;
+@custom-selector :--heading h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6;
+@custom-selector :--text-field input.text-field;
+@custom-selector :--button input.btn, button.btn;
+@custom-selector :--flex ".f-1, .f-2, .f-3, .f-4, .f-5, .f-6, .f-7, .f-8, .f-9, .f-10, .f-11, .f-12";
+
+
+@font-face {
+    font-family:    'Ubuntu';
+    font-style:     normal;
+    font-weight:    400;
+    src:            local('Ubuntu'), url(fonts//ubuntu-normal.woff) format('woff');
+}
+
+@font-face {
+    font-family:    'Ubuntu';
+    font-style:     normal;
+    font-weight:    700;
+    src:            local('Ubuntu Bold'), local('Ubuntu-Bold'), url(fonts/ubuntu-bold.woff) format('woff');
+}

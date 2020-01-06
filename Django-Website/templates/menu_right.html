@@ -1,0 +1,16 @@
+<div id="menu-right" class="menu right scrollbar-slim p-half-1">
+    <div class="item group">
+        <div class="header">
+            <div title="Profile" tabindex="-1">Profile</div>
+        </div>
+        <div class="menu">
+            {% if user.is_authenticated %}
+            <div class="item"><a tabindex="-1" href="{% url 'account_email' %}">Change E-mail</a></div>
+            <div class="item"><a tabindex="-1" href="{% url 'account_logout' %}">Sign Out</a></div>
+            {% else %}
+            <div class="item"><a tabindex="-1" href="{% url 'account_login' %}">Sign In</a></div>
+            <div class="item"><a tabindex="-1" href="{% url 'account_signup' %}">Sign Up</a></div>
+            {% endif %}
+        </div>
+    </div>
+</div>

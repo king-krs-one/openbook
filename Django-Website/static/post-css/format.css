@@ -1,0 +1,165 @@
+
+/********** REUSABLE CLASSES *******************************************************/
+
+.w-100 { width: 100% !important; }
+.w-max-100 { max-width: 100% !important; }
+.w-min-100 { min-width: 100% !important; }
+
+.w-800 { width: 800px !important; }
+.w-1000 { width: 1000px !important; }
+.w-1200 { width: 1200px !important; }
+
+.h-100 { height: 100% !important; }
+.h-max-100 { max-height: 100% !important; }
+.h-min-100 { min-height: 100% !important; }
+
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+.no-wrap { white-space: nowrap; }
+.pre-space { white-space: pre; }
+.pre-wrap { white-space: pre-wrap; }
+.pre-line { white-space: pre-line; }
+
+.sticky         { position: sticky !important; }
+.absolute       { position: absolute !important; }
+.relative       { position: relative !important; }
+.static         { position: static !important; }
+/* .fixed          { position: fixed !important; } */
+
+
+.sticky.left    { left: 0; right: auto; }
+.sticky.right   { right: 0; left: auto; }
+.sticky.top     { top: 0; bottom: auto; }
+.sticky.bottom  { bottom: 0; top: auto; }
+
+.no-border {
+    border: none !important;
+}
+
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
+.text-align-justify { text-align: justify; }
+
+/********** SECTION ELEMENTS *******************************************************/
+
+.frame {
+    height: 400px;
+    overflow: auto;
+    padding: 0;
+    background-color: transparent;
+    border: var(--border-frame);
+}
+
+.frame:not(:last-child) {
+    margin-bottom: var(--margin-bottom-frame)
+}
+
+.window {
+    padding: var(--padding-window);
+    background-color: var(--bg-color-window);
+    border: var(--border-window);
+}
+
+.window:not(:last-child) {
+    margin-bottom: var(--margin-bottom-window)
+}
+
+.panel {
+    padding: var(--padding-panel);
+    background-color: var(--bg-color-panel);
+    border: var(--border-panel);
+}
+
+.panel:not(:last-child) {
+    margin-bottom: var(--margin-bottom-panel)
+}
+
+.div_section {
+    width: 100%;
+    padding: var(--padding-div-section);
+    background-color: var(--bg-color-div-section);
+    border: var(--border-div-section);
+}
+
+.div_section:not(:last-child) {
+    margin-bottom: var(--margin-bottom-div-section)
+}
+
+
+/********** SCROLLBARS *******************************************************
+
+currently only supported for Chrome & Safari
+
+*/
+
+.scrollbar-slim::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+}
+  
+.scrollbar-slim::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scrollbar-slim::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: transparent;
+}
+  
+.scrollbar-slim:hover::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+ 
+.scrollbar-slim:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.25);
+}
+
+
+/********** OVERLAY *******************************************************/
+
+div.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+div.overlay,
+div.overlay-old {
+    position: fixed;
+    z-index: var(--z-index-overlay);
+    /* opacity: .75; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f5f5f5;
+    background-color: rgba(255,255,255,.6);
+}
+  
+div.overlay-old {
+    background-image: url('/../static/amp/img/ajax-load.gif') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+  
+  
+div.overlay .spinner-small {
+    height: 16px;
+    width: 16px;
+    background-image: url('/../static/amp/img/ajax-load.gif') !important;
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+  
+div.overlay .spinner-large {
+    height: 80px;
+    width: 80px;
+    background-image: url('/../static/img/spinner-large.gif') !important;
+    background-repeat: no-repeat;
+    background-position: center center;  
+}

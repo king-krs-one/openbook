@@ -1,0 +1,51 @@
+/** LABEL **/
+
+label {
+    /* width: 100%; */
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-label);
+    min-height: var(--height-label);
+    line-height: var(--height-label);
+    margin-bottom: var(--margin-bottom-label);
+}
+
+/** TEXT FIELD **/
+
+:--text-field {
+    display: inline-block;
+    padding: 0 0.5em;
+    margin: 0!important;
+    height: var(--height-text-field);
+    color: var(--color-text-field);
+    font-size: var(--font-size-text-field);
+    background-color: var(--bg-color-text-field);
+    border: var(--border-text-field);
+    outline: none;
+}
+
+:--text-field[disabled] {
+    background-color: var(--bg-color-text-field-disabled);
+    border: var(--border-text-field-disabled);
+}
+
+:--text-field:focus {
+    border: var(--border-text-field-focus);
+}
+
+:--text-field.left-aligned {
+    text-align: left;
+}
+
+:--text-field.right-aligned {
+    text-align: right;
+}
+
+/** CHECKBOX **/
+
+input.check-box {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,361 @@
+/* MENU VERTICAL */
+
+@custom-selector :--menu-not-ver .menu:not(.vertical);
+@custom-selector :--menu-not-hor .menu:not(.horizontal);
+
+:--menu-vertical {
+    width: var(--width-sidebar);
+    background-color: var(--bg-color-sidebar);
+}
+:--menu-vertical :--menu-vertical {
+    width: 100%;
+}
+
+:--menu-vertical,
+:--menu-vertical .menu {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+:--menu-vertical :--menu-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+:--menu-left {
+    border-right: var(--border-sidebar);
+}
+
+:--menu-right {
+    border-left: var(--border-sidebar);
+}
+
+:--menu-vertical .item {
+    position: relative;
+}
+
+:--menu-vertical .item.group {
+    padding: 0.5em;
+}
+
+:--menu-vertical .item .menu > .item.group {
+    font-size: 0.85em;
+}
+
+:--menu-vertical .item .sub.menu > .item.group {
+    font-size: 1em;
+}
+
+:--menu-vertical .item .sub.menu {
+    font-size: 0.85em;
+    padding: 0 0.5em;
+}
+
+:--menu-vertical .header {
+    font-weight: bold;
+}
+
+:--menu-vertical a.header,
+:--menu-vertical .header > a {    
+    color: var(--color-link);
+}
+
+:--menu-vertical .header > a.active,
+:--menu-vertical .header.active > a {    
+    color: var(--color-link-active);
+}
+
+:--menu-vertical > a, 
+:--menu-vertical > .item > a, 
+:--menu-vertical .menu > a, 
+:--menu-vertical .menu > .item > a {
+    /* all menu link items except header */
+    color: var(--color-link);
+}
+
+:--menu-vertical > a.active,
+:--menu-vertical > .item.active > a,
+:--menu-vertical .menu > a.active,
+:--menu-vertical .menu > .item.active > a {
+    color: var(--color-link-active);
+    font-weight: bold;
+}
+
+/* Divider between Items */
+:--menu-vertical .item.divide-before:before,
+:--menu-vertical .item.divide-after:after,
+:--menu-vertical .item.group:not(:first-child):before,
+:--menu-vertical .menu.divide > .item.group:not(:first-child):before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(34,36,38,.1);
+}
+
+:--menu-vertical.no-divide .item.group:before,
+:--menu-vertical .menu.no-divide > .item.group:before {
+    content: none;
+}
+
+:--menu-vertical.no-divide .item.divide-before:before {
+    top: 0; bottom: auto;
+}
+
+:--menu-vertical.no-divide .item.divide-after:after {
+    top: auto; bottom: 0;
+}
+
+/* MENU HORIZONTAL */
+
+:--menu-horizontal {
+    position: relative;
+    border-bottom: var(--border-menu);
+    background-color: var(--bg-color-menu);
+}
+
+:--menu-horizontal,
+:--menu-horizontal .sub.menu {
+    width: 100%;
+    padding: 0 20px;
+    z-index: var(--z-index-menu-horizontal);
+}
+
+:--menu-horizontal,
+:--menu-horizontal .menu {
+    display: flex;
+    flex-direction: row;
+}
+
+:--menu-horizontal :--menu-vertical {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+:--menu-horizontal > .item > .sub.menu,
+:--menu-horizontal :--menu-not-ver > .item > .sub.menu {
+    left: 0; top: auto;
+    visibility: hidden;
+    position: absolute !important;
+    border-top: var(--border-menu);
+    border-bottom: var(--border-menu);
+    background-color: var(--bg-color-submenu);
+}
+
+:--menu-horizontal > .item.active > .sub.menu,
+:--menu-horizontal :--menu-not-ver > .item.active > .sub.menu {
+    visibility: visible;
+}
+
+/* LINK ITEMS */
+
+:--menu-horizontal a {
+    color: var(--color-link);
+}
+
+:--menu-horizontal a.active {
+    font-weight: bold;
+}
+
+:--menu-horizontal .header {
+    font-weight: bold;
+}
+
+:--menu-horizontal a.header,
+:--menu-horizontal .header > a {  
+    padding: .5em;  
+    color: var(--color-link);
+}
+
+:--menu-horizontal > a,
+:--menu-horizontal > .item > a,
+:--menu-horizontal :--menu-not-ver > a,
+:--menu-horizontal :--menu-not-ver > .item > a {
+    display: flex;
+    align-items: center;
+    
+    padding: .5em;
+    color: var(--color-link);
+}
+
+:--menu-horizontal > a.active,
+:--menu-horizontal > .item.active > a,
+:--menu-horizontal :--menu-not-ver > a.active,
+:--menu-horizontal :--menu-not-ver > .item.active > a {
+    color: var(--color-link-active);
+    font-weight: bold;
+}
+
+:--menu-horizontal :--menu-vertical > a,
+:--menu-horizontal :--menu-vertical > .item > a,
+:--menu-horizontal :--menu-vertical > .item > .sub.menu > a,
+:--menu-horizontal :--menu-vertical > .item > .sub.menu > .item > a {
+    color: var(--color-link);
+}
+
+:--menu-horizontal .sub.menu > .item > a {
+    color: var(--color-link);
+}
+
+:--menu-horizontal .sub.menu > .item > a.active,
+:--menu-horizontal .sub.menu > .item.active > a {    
+    color: var(--color-link-active);
+    font-weight: bold;
+}
+
+/* MENU HORIZONTAL TABS */
+
+:--menu-horizontal .menu.tabs > .item {
+    border: var(--border-menu-tabs);
+    border-bottom: none;
+    background-color: var(--bg-color-menu-tab);
+}
+
+:--menu-horizontal .menu.tabs > .item.active {
+    background-color: var(--bg-color-menu-tab-active);
+}
+
+:--menu-horizontal .menu.tabs > .item > a {
+    padding: .5em .75em;
+    color: var(--color-menu-tabs);
+}
+
+:--menu-horizontal .menu.tabs > .item.active > a,
+:--menu-horizontal .menu.tabs > .item > a.active {
+    color: var(--color-menu-tabs);
+}
+
+/* ALIGNMENT */
+
+:--menu-horizontal .menu.tabs > .item ~ .item {
+    margin-left: 10px;
+}
+
+:--menu-horizontal > .item.group ~ .item,
+:--menu-horizontal :--menu-not-ver > .item.group ~ .item {
+    margin-left: 10px;
+}
+
+/* ADD BORDERS */
+
+/* HORIZONTAL */
+
+:--menu-horizontal.no-border,
+:--menu-horizontal :--menu.no-border {
+    border: none !important;
+}
+
+:--menu-horizontal.border-top,
+:--menu-horizontal :--menu.border-top {
+    border-top: var(--border-menu) !important;
+}
+
+:--menu-horizontal.border-bottom,
+:--menu-horizontal :--menu.border-bottom {
+    border-bottom: var(--border-menu) !important;
+}
+
+:--menu-horizontal.border-left,
+:--menu-horizontal :--menu.border-left {
+    border-left: var(--border-menu) !important;
+}
+
+:--menu-horizontal.border-right,
+:--menu-horizontal :--menu.border-right {
+    border-right: var(--border-menu) !important;
+}
+
+/* VERTICAL */
+
+:--menu-vertical.no-border,
+:--menu-vertical :--menu.no-border {
+    border: none !important;
+}
+
+:--menu-vertical.border-top,
+:--menu-vertical :--menu.border-top {
+    border-top: var(--border-menu) !important;
+}
+
+:--menu-vertical.border-bottom,
+:--menu-vertical :--menu.border-bottom {
+    border-bottom: var(--border-menu) !important;
+}
+
+:--menu-vertical.border-left,
+:--menu-vertical :--menu.border-left {
+    border-left: var(--border-menu) !important;
+}
+
+:--menu-vertical.border-right,
+:--menu-vertical :--menu.border-right {
+    border-right: var(--border-menu) !important;
+}
+
+/* DROPDOWN MENU  */
+
+
+
+:--menu .dropdown {
+    position: relative;
+}
+
+:--menu .dropdown.menu {
+    display: initial ;
+}
+
+:--menu .dropdown > a,
+:--menu .dropdown > .item > a {
+    padding: .5em;
+    color: var(--color-link);
+}
+
+:--menu .dropdown > a.active,
+:--menu .dropdown > .item.active > a {
+    color: var(--color-link-active);
+    font-weight: bold;
+}
+
+:--menu .dropdown > .dropdown-toggle  {
+    cursor: pointer;
+}
+
+:--menu .dropdown .menu {
+    display: none;
+    background-color: var(--bg-color-submenu);
+    border: var(--border-menu) !important;
+}
+
+:--menu .dropdown:hover :not(.dropdown-toggle) ~ .menu,
+:--menu .dropdown.active .menu {
+    display: block;
+    position: absolute;
+}
+
+:--menu .dropdown .menu.right-edge {
+    right: 0;
+}
+
+:--menu .dropdown .menu.left-edge {
+    left: 0;
+}
+
+:--menu .dropdown .menu .item {
+    border-top: var(--border-transparent);
+    border-bottom: var(--border-transparent);
+}
+
+:--menu .dropdown .menu .item:hover {
+    background-color: var(--bg-color-dropdown-item-active);
+    border-top: var(--border-gray-light);
+    border-bottom: var(--border-gray-light);
+}
+
+:--menu .dropdown .menu .item a {
+    padding: .25rem .5rem !important;
+}
