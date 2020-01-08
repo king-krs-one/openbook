@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from django.contrib import admin
 
-from .views import app_index
+from .views import app_index, upload_image
 
 urlpatterns = [
     path('', app_index),
@@ -12,6 +12,8 @@ urlpatterns = [
     path('posts/', include('posts.urls')),
     path('accounts/', include('allauth.urls')),
     path('accounts/', include('accounts.urls')),
+
+    path('upload', upload_image, name="upload_image"),
 ]
 
 

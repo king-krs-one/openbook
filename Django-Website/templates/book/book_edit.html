@@ -5,9 +5,11 @@
 {% block head_title %}{% trans "Edit Book" %}{% endblock %}
 
 {% block content %}
+{% csrf_token %}
 <h1>{% trans "Edit book ..." %}</h1>
 
 <div>
     Edit book ...
 </div>
+
 {% endblock %}

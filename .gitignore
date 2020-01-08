@@ -1,0 +1,4 @@
+Django-Website/
+**/*.pyc
+**/migrations
+db.sqlite3

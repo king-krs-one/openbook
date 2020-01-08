@@ -28,7 +28,8 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: [/(node_modules|bower_components)/, path.join(__dirname, 'ckeditor')],
+                // exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
                     query: {
