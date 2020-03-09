@@ -18,12 +18,7 @@
     }
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^16.0.0",
-    "@ckeditor/ckeditor5-build-decoupled-document": "^16.0.0",
-    "@ckeditor/ckeditor5-ckfinder": "^16.0.0",
     "@ckeditor/ckeditor5-react": "^2.0.0",
-    "@ckeditor/ckeditor5-upload": "^16.0.0",
-    "@ckeditor/ckeditor5-widget": "^16.0.0",
     "@quipugmbh/react-datetimecombo": "^0.1.15",
     "django-react-csrftoken": "^1.0.4",
     "moment": "^2.24.0",
@@ -36,7 +31,8 @@
     "react-table": "^7.0.0-rc.15",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.3",
+    "uninstall": "0.0.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
