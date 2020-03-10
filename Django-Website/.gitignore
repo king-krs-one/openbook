@@ -1,6 +1,0 @@
-env
-**/*.pyc
-**/.vscode
-**/migrations
-**/node_modules
-**/db.sqlite3
